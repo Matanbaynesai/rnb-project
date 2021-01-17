@@ -1,0 +1,140 @@
+.usher{
+    display: grid;
+    grid-template-areas: 
+    'header header header header'
+    'section section  aside aside'
+    'section section  aside aside'
+    'article article article article'
+    'article article article article'
+    'footer footer footer footer';
+
+
+    gap:20px;
+}  
+body{
+    background-image: url(./images/background3.jpg);
+    background-size: cover;
+}  
+header{
+    border: solid 2px red;
+    background-color: brown;
+    grid-area: header;
+    border: solid 2px white;
+    background-color: black;
+    border-radius: 30px;
+    position: relative;
+    position: sticky;
+    top:0px;
+
+}
+section{
+
+    background-image: url(./images/rnb-music-neon-text-player-260nw-1206227794.webp);
+    background-size: cover;
+    height: 250px;
+    border: solid 2px white;
+    grid-area: section;
+    border-radius: 10px;
+}
+aside{
+    background-image: url(./images/background3.jpg);
+    background-size: cover;
+    border: solid 2px black;
+    grid-area: aside;
+    animation:matann 7s infinite ease-in-out;
+}
+@keyframes matann{
+    0%{background-image: url(./images/Usher2.jpg);}
+    50%{background-image: url(./images/usherpre.jpg);}
+    75%{background-image: url(./images/usher.jpg);}
+    100%{background-image: url(./images/background3.jpg);background-position: center;}
+}
+
+article{
+    background-color: crimson;
+    border: solid 2px purple;
+    grid-area: article;
+}
+footer{
+    background-image: linear-gradient(black,white);
+    border: solid 2px brown;
+    grid-area: footer;
+}
+.pp{
+    font-family: 'Parisienne', cursive;
+    color: white;
+    margin-top: 55px;
+    margin-left: 10px;
+    position: absolute;
+    
+}
+.menu ul{
+    font-size: 50px;
+    margin-top: 0px;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    
+}
+.menu ul li{
+    color: rgb(184, 92, 226);
+    display: inline;
+    list-style: none;
+    font-size: 20px;
+    padding:20px;
+    margin-right: 200px;
+    transition: 1s;
+}
+.menu ul li:hover{
+    background-color: rgb(117, 223, 170);
+    font-size: 25px;
+}
+.logo{
+    border-radius: 70px;
+    position: absolute;
+    left: 1400px;
+    position: sticky;
+    animation-name: matan;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes matan{
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(180deg);}
+    100%{transform: rotate(360);}
+}
+article{
+    background-image: linear-gradient(white,black);
+
+}
+article iframe{
+    float: right;
+}
+.par{
+    font-family: 'Parisienne', cursive;
+    color: darkred;
+    font-size: 20px;
+}
+footer a{
+    text-decoration: none;
+    font-size: 30px;
+    padding:30px;
+    color:purple;
+    transition-duration: 1s;
+}
+a:hover{
+    
+    color:white;
+    
+}
+.fa{
+    color: white;
+    transition-duration: 1s;
+}
+.fa:hover{
+    color: purple;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}

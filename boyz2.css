@@ -1,0 +1,129 @@
+.boyzc{
+    display: grid;
+    grid-template-areas: 
+    'header header header header'
+    'section section  aside aside'
+    'section section  aside aside'
+    'article article article article'
+    'article article article article'
+    'footer footer footer footer';
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    gap:20px;
+}    
+body{
+    background-image: url(./images/baackground2.jpg);
+    background-size: cover;
+}
+header{
+    border: solid 2px red;
+    background-color: brown;
+    grid-area: header;
+    border: solid 2px white;
+    background-color: black;
+    border-radius: 30px;
+    position: relative;
+    position: sticky;
+    top:0px;
+
+}
+section{
+    background-image: url(./images/rnb-music-neon-text-player-260nw-1206227794.webp) ;
+    border: solid 2px yellow;
+    grid-area: section;
+}
+aside{
+    background-color: chartreuse;
+    border: solid 2px black;
+    grid-area: aside;
+}
+article{
+    background-image:radial-gradient(black,blue,white);
+    border: solid 4px black;
+    border-radius: 20px;
+    grid-area: article;
+}
+article p{
+    font-size: 20px;
+}
+footer{
+    border-radius: 20px;
+    border: solid 3px white;
+    grid-area: footer;
+}
+.pp{
+    font-family: 'Parisienne', cursive;
+    color: white;
+    margin-top: 55px;
+    margin-left: 10px;
+    position: absolute;
+    
+}
+.menu ul{
+    font-size: 50px;
+    margin-top: 0px;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    
+}
+.menu ul li{
+    color: rgb(184, 92, 226);
+    display: inline;
+    list-style: none;
+    font-size: 20px;
+    padding:20px;
+    margin-right: 200px;
+    transition: 1s;
+}
+.menu ul li:hover{
+    background-color: rgb(117, 223, 170);
+    font-size: 25px;
+}
+.logo{
+    border-radius: 70px;
+    position: absolute;
+    left: 1400px;
+    position: sticky;
+    animation-name: matan;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes matan{
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(180deg);}
+    100%{transform: rotate(360);}
+}
+footer a{
+    text-decoration: none;
+    font-size: 30px;
+    padding:30px;
+    color:purple;
+    transition-duration: 1s;
+}
+a:hover{
+    
+    color:white;
+    
+}
+.fa{
+    color: white;
+    transition-duration: 1s;
+}
+.fa:hover{
+    color: purple;
+}
+iframe{
+    float: top;
+    margin-left: 900px;
+}
+article img{
+    border-radius: 70px;
+    margin: 25px;
+    box-shadow: black 20px 20px 5px;
+}
+a{
+    text-decoration: none;
+}
+

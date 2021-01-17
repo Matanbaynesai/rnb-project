@@ -1,0 +1,157 @@
+.cbc{
+    display: grid;
+    grid-template-areas: 
+    'header header header header'
+    'section section  aside aside'
+    'section section  aside aside'
+    'article article article article'
+    'article article article article'
+    'footer footer footer footer';
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    gap:20px;
+}    
+body{
+    background-image: url(./images/baackground2.jpg);
+}
+header{
+    border: solid 2px red;
+    background-color: brown;
+    grid-area: header;
+    border: solid 2px white;
+    background-color: black;
+    border-radius: 30px;
+    position: relative;
+    position: sticky;
+    top:0px;
+
+}
+section{
+    background-color: cadetblue;
+    border: solid 3px white;
+    grid-area: section;
+    background-image: url(./images/rnb-music-neon-text-player-260nw-1206227794.webp);
+    background-size: cover;
+    height: 250px;
+}
+aside{
+    border: solid 2px black;
+    grid-area: aside;
+    background-image: url(./images/logo.jpg); background-position: center;
+    
+    animation: 7s infinite ease-in-out;
+    animation-name: cb;
+    
+}
+@keyframes cb{
+    0%{background-image: url(./images/logo.jpg);}
+    30%{background-image: url(./images/cbshow3.jpg);background-size: cover;}
+    50%{background-image: url(./images/cbshow2.jpg);background-size: cover;}
+    100%{background-image: url(./images/cbshow3.jpg);background-size: cover;}
+    
+    
+}
+article{
+    background-color: crimson;
+    border: solid 2px white;
+    border-radius: 40px;
+    grid-area: article;
+}
+article img{
+    border-radius: 40px;
+    box-shadow: black 10px 10px 10px;
+    margin-left: 500px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    width: 400px;
+    height: 300px;
+}
+footer{
+    
+    background-image: linear-gradient(black,white,purple);
+    border: solid 3px white;
+    grid-area: footer;
+    border-radius: 30px;
+}
+.pp{
+    font-family: 'Parisienne', cursive;
+    color: white;
+    margin-top: 55px;
+    margin-left: 10px;
+    position: absolute;
+    
+}
+.menu ul{
+    font-size: 50px;
+    margin-top: 0px;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    
+}
+.menu ul li{
+    color: rgb(184, 92, 226);
+    display: inline;
+    list-style: none;
+    font-size: 20px;
+    padding:20px;
+    margin-right: 200px;
+    transition: 1s;
+}
+.menu ul li:hover{
+    background-color: rgb(117, 223, 170);
+    font-size: 25px;
+}
+.logo{
+    border-radius: 70px;
+    position: absolute;
+    left: 1400px;
+    position: sticky;
+    animation-name: matan;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes matan{
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(180deg);}
+    100%{transform: rotate(360);}
+}
+article{
+    background-image: radial-gradient(red,white,black)
+}
+ iframe{
+    margin-left:250px;
+    width: 1000px;
+    height: 1000px;
+}
+.par p{
+    
+    font-size: 20px;
+    text-align: justify;
+    font-family: 'Abril Fatface', cursive;
+    
+}
+footer a{
+    text-decoration: none;
+    font-size: 30px;
+    padding:30px;
+    color:purple;
+    transition-duration: 1s;
+}
+a:hover{
+    
+    color:white;
+    
+}
+.fa{
+    color: white;
+    transition-duration: 1s;
+}
+.fa:hover{
+    color: purple;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}

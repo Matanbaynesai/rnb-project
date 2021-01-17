@@ -1,0 +1,226 @@
+.container{
+    display: grid;
+    grid-template-areas: 
+    'header header header header header '
+    'section section section aside aside'
+    'section section section aside aside'
+    'article article article article article'
+    'article article article article article'
+    'footer footer footer footer footer ';
+
+    grid-template-rows: repeat(5fr); 
+    grid-template-rows: repeat(5fr);
+    
+
+    gap:20px;
+}
+
+@media(max-width:600px;)
+{
+    .grid{
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'section aside'
+    'section aside'
+    'article article'
+    'article article'
+    'footer footer';
+}
+}
+body{
+    background-image: url(./images/baackground2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header{
+    grid-area: header;
+    display: grid;
+    border: solid 2px white;
+    background-color: black;
+    border-radius: 30px;
+    position: relative;
+    position: sticky;
+    top:0px;
+}
+.logo{
+    border-radius: 70px;
+    position: absolute;
+    left: 1400px;
+    position: sticky;
+    animation-name: matan;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes matan{
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(180deg);}
+    100%{transform: rotate(360);}
+}
+
+
+
+section{
+    display: grid;
+    grid-area: section;
+    border: solid 2px white;
+    color: white;
+    border-radius: 10px;
+    background-image: url(./images/rnb-music-neon-text-player-260nw-1206227794.webp);
+}
+
+aside{
+    display: grid;
+    grid-area: aside;
+    border: solid 4px white;
+    border-radius: 10px;
+    background-image: url(./images/background3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    animation-name: matann;
+    animation-duration: 14s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes matann{
+    0%{background-image: url(./images/background3.jpg);background-position: center;}
+    20%{ background-image: url(./images/tank2.jpg);background-size:100%;}
+    45%{background-image: url(./images/usher2.jpg);background-size: 70% ;}
+    70%{ background-image: url(./images/cbshow);background-position: center;}
+    90%{ background-image: url(./images/ginuwine2.jpg);}
+    110%{background-image: url(./images/marioshow.jpg);background-position: 100%;}
+    130%{background-image: url(./images/tank.jpg);background-position: center;}
+}
+
+article {
+    display: grid;
+    grid-area: article;
+    flex-direction:column;
+    border:solid 3px white;
+    border-radius: 10px;
+    background-image: linear-gradient(black, purple, white,red,black);
+}
+article img{ 
+    display: flex;
+    border-radius: 200px;
+    width:450px;
+    height: 450px;
+    padding: 20px;
+    border:darkgrey solid 3px;
+    cursor: pointer;
+    justify-content: center;
+    transition: 1s;
+
+}
+article img:hover{
+    border-radius: 100px;
+    width: 480px;
+    border:solid purple 9px;
+}
+
+.artists p{
+    color:blanchedalmond;
+    font-size: 30px;
+    width: 400px;
+    background-color: cornflowerblue;
+    transition: 2s;
+    font-family: 'Abril Fatface', cursive;
+    
+
+}
+.artists p:hover{
+    padding-left: 130px;
+    background-color: cyan;
+    color: black;
+}
+
+
+footer{
+    display: grid;
+    grid-area: footer;
+    border: solid 4px white;
+    border-radius: 10px;
+    
+    
+}
+.pp{
+    font-family: 'Parisienne', cursive;
+    color: white;
+    margin-top: 55px;
+    margin-left: 10px;
+    position: absolute;
+    
+}
+.menu ul{
+    font-size: 50px;
+    margin-top: 0px;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    cursor: pointer;
+}
+.menu ul li{
+    color: rgb(184, 92, 226);
+    display: inline;
+    list-style: none;
+    font-size: 20px;
+    padding:20px;
+    margin-right: 200px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.menu ul li:hover{
+    background-color: rgb(117, 223, 170);
+    font-size: 25px;
+   
+}
+.reg{
+    color:rgb(184, 92, 226);
+    font-size: 20px;
+    font-family: 'Abril Fatface', cursive;
+}
+.reg h4{
+    border: solid 2px;
+    text-align: center;
+    transition: 1s;
+}
+.reg h4:hover{
+    background-color: black;
+    color: blanchedalmond;
+}
+.artists{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}    
+embed{
+    float:right;
+    height: 50px;
+}
+
+footer a{
+    text-decoration: none;
+    font-size: 30px;
+    color:purple;
+    transition-duration: 1s;
+    padding-left: 40px;
+}
+a:hover{
+    
+    color:white;
+    
+}
+.fa{
+    color: white;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+.fa:hover{
+    color: purple;
+}
+a{
+    text-decoration: none;
+}
