@@ -8,26 +8,32 @@
     'article article article article article'
     'footer footer footer footer footer ';
 
-    grid-template-rows: repeat(5fr); 
-    grid-template-rows: repeat(5fr);
+    grid-template-rows: repeat(5fr);  
+    grid-template-columns: repeat(5fr);
     
 
-    gap:20px;
+    gap:10px;
 }
 
-@media(max-width:600px;)
-{
+@media screen and (max-width:600px){
     .container{
     display: grid;
     grid-template-areas: 
-    'header header'
-    'section aside'
-    'section aside'
-    'article article'
-    'article article'
-    'footer footer';
+    'header'
+    'section'
+    'aside'
+    'article'
+    'article'
+    'footer ';
+
+    grid-template-rows: 5% 5% 5% 55% 30%;
+    /* grid-template-rows: 5% 5% 10% 60% 20%; */
+
 }
+    
+   
 }
+
 body{
     background-image: url(./images/baackground2.jpg);
     background-size: cover;
@@ -39,27 +45,23 @@ header{
     border: solid 2px white;
     background-color: black;
     border-radius: 30px;
-    position: relative;
     position: sticky;
     top:0px;
 }
 .logo{
     border-radius: 70px;
     position: absolute;
-    left: 1400px;
+    left: 400%;
     position: sticky;
-    animation-name: matan;
+    animation-name: logo;
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
-@keyframes matan{
+@keyframes logo{
     0%{transform: rotate(0deg);}
     50%{transform: rotate(180deg);}
     100%{transform: rotate(360);}
 }
-
-
-
 section{
     display: grid;
     grid-area: section;
@@ -68,7 +70,6 @@ section{
     border-radius: 10px;
     background-image: url(./images/rnb-music-neon-text-player-260nw-1206227794.webp);
 }
-
 aside{
     display: grid;
     grid-area: aside;
@@ -78,21 +79,17 @@ aside{
     background-position: center;
     background-repeat: no-repeat;
     background-color: black;
-    animation-name: matann;
-    animation-duration: 14s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
+    animation: matann 19s 2s infinite alternate;
 }
 @keyframes matann{
-    0%{background-image: url(./images/background3.jpg);background-position: center;}
-    20%{ background-image: url(./images/tank2.jpg);background-size:100%;}
-    45%{background-image: url(./images/usher2.jpg);background-size: 70% ;}
-    70%{ background-image: url(./images/cbshow);background-position: center;}
-    90%{ background-image: url(./images/ginuwine2.jpg);}
-    110%{background-image: url(./images/marioshow.jpg);background-position: 100%;}
-    130%{background-image: url(./images/tank.jpg);background-position: center;}
+    15%{background-image: url(./images/boyzsh1.jpg);background-position: center;}
+    26%{ background-image: url(./images/tank2.jpg);background-size:cover;}
+    37%{background-image: url(./images/usher2.jpg);background-size: cover ;}
+    50%{ background-image: url(./images/cbshow);background-position: center;}
+    63%{ background-image: url(./images/ginuwine2.jpg);background-size: cover;}
+    76%{background-image: url(./images/marioshow.jpg);background-position: 100%;}
+    100%{background-image: url(./images/tank.jpg);background-size: cover;}
 }
-
 article {
     display: grid;
     grid-area: article;
@@ -106,7 +103,6 @@ article img{
     border-radius: 200px;
     width:450px;
     height: 450px;
-    padding: 20px;
     border:darkgrey solid 3px;
     cursor: pointer;
     justify-content: center;
@@ -126,23 +122,22 @@ article img:hover{
     background-color: cornflowerblue;
     transition: 2s;
     font-family: 'Abril Fatface', cursive;
-    
-
 }
 .artists p:hover{
     padding-left: 130px;
     background-color: cyan;
     color: black;
+}.artists{
+    display: flex;
+    flex-wrap: wrap;
 }
-
-
 footer{
     display: grid;
     grid-area: footer;
     border: solid 4px white;
     border-radius: 10px;
-    
-    
+    position: sticky;
+    bottom: 0px;
 }
 .pp{
     font-family: 'Parisienne', cursive;
@@ -150,27 +145,27 @@ footer{
     margin-top: 55px;
     margin-left: 10px;
     position: absolute;
-    
 }
 .menu ul{
     font-size: 50px;
     margin-top: 0px;
     text-align: center;
-    position: fixed;
+    position: sticky;
     top: 0px;
     cursor: pointer;
+    display: flex;
+    justify-content: space-around;
 }
 .menu ul li{
     color: rgb(184, 92, 226);
-    display: inline;
+    /* display: inline; */
     list-style: none;
     font-size: 20px;
     padding:20px;
-    margin-right: 200px;
+    /* margin-right: 200px; */
     cursor: pointer;
     transition: 1s;
 }
-
 .menu ul li:hover{
     background-color: rgb(117, 223, 170);
     font-size: 25px;

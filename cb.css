@@ -8,9 +8,10 @@
     'article article article article'
     'footer footer footer footer';
 
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5fr);
+    grid-template-rows: repeat(5fr);
 
-    gap:20px;
+    gap:10px;
 }    
 body{
     background-image: url(./images/baackground2.jpg);
@@ -28,35 +29,40 @@ header{
 
 }
 section{
-    background-color: cadetblue;
     border: solid 3px white;
+    border-radius: 20px;
     grid-area: section;
     background-image: url(./images/rnb-music-neon-text-player-260nw-1206227794.webp);
     background-size: cover;
     height: 250px;
 }
 aside{
-    border: solid 2px black;
+    border: solid 3px rgb(255, 253, 253);
+    border-radius: 20px;
     grid-area: aside;
-    background-image: url(./images/logo.jpg); background-position: center;
+    background-image: url(./images/background3.jpg); 
+    background-size: cover;
+    animation: cb 12s infinite 2s ease-in-out alternate-reverse;
+    animation-delay: 2s;
     
-    animation: 7s infinite ease-in-out;
-    animation-name: cb;
     
 }
 @keyframes cb{
-    0%{background-image: url(./images/logo.jpg);}
-    30%{background-image: url(./images/cbshow3.jpg);background-size: cover;}
-    50%{background-image: url(./images/cbshow2.jpg);background-size: cover;}
-    100%{background-image: url(./images/cbshow3.jpg);background-size: cover;}
+    0%{background-image: url(./images/background3.jpg);}
+    25%{background-image: url("https://i.ytimg.com/vi/tO2UMyXKd2s/hqdefault.jpg");}
+    50%{background-image: url(./images/cbshow2.jpg);}
+    75%{background-image: url(./images/cbshow3.jpg);}
+    100%{background-image:url(./images/background3.jpg);background-position: center;}
     
     
 }
 article{
+    
     background-color: crimson;
     border: solid 2px white;
     border-radius: 40px;
     grid-area: article;
+    background-image: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);
 }
 article img{
     border-radius: 40px;
@@ -69,10 +75,11 @@ article img{
 }
 footer{
     
-    background-image: linear-gradient(black,white,purple);
-    border: solid 3px white;
+    background-image: linear-gradient(black,red);
+    border:  3px;
     grid-area: footer;
     border-radius: 30px;
+    margin-bottom: px;
 }
 .pp{
     font-family: 'Parisienne', cursive;
@@ -117,9 +124,6 @@ footer{
     50%{transform: rotate(180deg);}
     100%{transform: rotate(360);}
 }
-article{
-    background-image: radial-gradient(red,white,black)
-}
  iframe{
     margin-left:250px;
     width: 1000px;
@@ -132,25 +136,26 @@ article{
     font-family: 'Abril Fatface', cursive;
     
 }
-footer a{
+ .icons{
     text-decoration: none;
-    font-size: 30px;
-    padding:30px;
+    font-size: 20px;
     color:purple;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
 a:hover{
-    
+    transform: scale(1.5);
     color:white;
     
 }
 .fa{
-    color: white;
-    transition-duration: 1s;
+    color:blue;
+    transition-duration: 0.5s;
+
 }
 .fa:hover{
-    color: purple;
+    color: white;
     cursor: pointer;
+    transform: scale(1.5);
 }
 a{
     text-decoration: none;
